@@ -1,0 +1,78 @@
+$bgColor: #FFD000;
+$imgWidth: 10em;
+
+@mixin translate($amountX, $amountY) {
+
+      -ms-transform: translate($amountX, $amountY);
+  -webkit-transform: translate($amountX, $amountY);
+          transform: translate($amountX, $amountY);
+
+}
+
+@mixin scale($amountX, $amountY) {
+
+      -ms-transform: scale($amountX, $amountY);
+  -webkit-transform: scale($amountX, $amountY);
+          transform: scale($amountX, $amountY);
+
+}
+
+@keyframes pulsate-idle {
+  
+  0%   {@include scale(1, 1);}
+  50%  {@include scale(1.1, 1.1);}
+  100% {@include scale(1, 1);}
+  
+}
+
+body {
+  
+  background-color: $bgColor;
+  
+}
+
+#description {
+  
+  padding: 2em;
+  font-size: 2em;
+  
+}
+
+#loader {
+  
+  padding-left: 50%;
+  padding-top: $imgWidth/2;
+  padding-bottom: $imgWidth/2;
+  
+  @include translate(-$imgWidth/2, 0em);
+  
+}
+
+#loader img {
+  
+  width: $imgWidth;
+  
+  animation-name: pulsate-idle;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier();
+  animation-iteration-count: infinite;
+  
+  cursor: pointer;
+  
+}
+
+#loader #howTo {
+  
+  padding-top: 2em;
+  text-align: center;
+  width: $imgWidth;
+  
+  cursor: pointer;
+  
+}
+
+#hiddenInput {
+  
+  display: none;
+  
+}

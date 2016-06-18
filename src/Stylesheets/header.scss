@@ -1,0 +1,40 @@
+$headerHeight: 3em;
+
+header, body {
+
+  font-family: "signika";
+
+}
+
+#headerBG {
+
+  color: white;
+
+  height: $headerHeight;
+
+}
+
+#headerBG #logo {
+
+  padding: $headerHeight/4;
+
+}
+
+#logo * {
+
+  display: inline;
+  vertical-align:middle;
+  margin: none;
+}
+
+#logo img {
+
+  height: $headerHeight/2;
+
+}
+
+#logo img + div {
+  
+  margin-left: 0.5em;
+  
+}
