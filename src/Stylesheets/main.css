@@ -2,98 +2,202 @@
 v2.0 | 20110126
 License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  color: #333; }
+  color: #333;
+}
+
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
-ol, ul {
-  list-style: none; }
+ol,
+ul {
+  list-style: none;
+}
 
-blockquote, q {
-  quotes: none; }
+blockquote,
+q {
+  quotes: none;
+}
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
-header, body {
-  font-family: "signika"; }
+header,
+body {
+  font-family: "signika";
+}
 
 #headerBG {
   color: white;
-  height: 3em; }
+  height: 3em;
+}
 
 #headerBG #logo {
-  padding: 0.75em; }
+  padding: 0.75em;
+}
 
 #logo * {
   display: inline;
   vertical-align: middle;
-  margin: none; }
+  margin: none;
+}
 
 #logo img {
-  height: 1.5em; }
+  height: 1.5em;
+}
 
 #logo img + div {
-  margin-left: 0.5em; }
+  margin-left: 0.5em;
+}
 
 @keyframes pulsate-idle {
   0% {
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
-    transform: scale(1, 1); }
+    transform: scale(1, 1);
+  }
   50% {
     -ms-transform: scale(1.1, 1.1);
     -webkit-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1); }
+    transform: scale(1.1, 1.1);
+  }
   100% {
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
-    transform: scale(1, 1); } }
+    transform: scale(1, 1);
+  }
+}
+
 body {
-  background-color: #FFD000; }
+  background-color: #FFD000;
+}
 
 #description {
   padding: 2em;
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 #loader {
-  padding-left: 50%;
-  padding-top: 5em;
-  padding-bottom: 5em;
-  -ms-transform: translate(-5em, 0em);
-  -webkit-transform: translate(-5em, 0em);
-  transform: translate(-5em, 0em); }
+  
+  position: absolute;
+  top: 45%;
+  
+}
 
 #loader img {
   width: 10em;
@@ -101,21 +205,108 @@ body {
   animation-duration: 2s;
   animation-timing-function: cubic-bezier();
   animation-iteration-count: infinite;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #loader #howTo {
   padding-top: 2em;
   text-align: center;
   width: 10em;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #hiddenInput {
-  display: none; }
+  display: none;
+}
+
+#editor-container {
+  
+  display: none;
+  position: relative;
+  
+}
+
+#editor-background {
+  
+  width: 256px;
+  height: 256px;
+  position: absolute;
+  
+  background-color: white;
+  border-radius: 256px;
+}
+
+#editor {
+  
+  height: 400px;
+  
+}
+
+#preview {
+  
+  position: absolute;
+  
+  top: 64px;
+  
+}
+
+#editor-info {
+  
+  position: absolute;
+  text-align: center;
+  
+  top: 265px;
+  
+}
+
+#controls {
+  
+  top: 85%;
+  position: relative;
+  display: inline-flex;
+}
+
+.centered {
+  margin-left: 50%;
+  -ms-transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.btn {
+
+  margin: 10px;
+  
+  position: relative;
+  width: 8em;
+  height: 2em;
+
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+  
+  text-align: center;
+  
+  cursor: pointer;
+  
+}
+
+.label {
+  
+  top: 50%;
+  
+  position: relative;
+  color: white;
+  
+  -ms-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+    
+}
 
 #ElBatrak {
   position: absolute;
   right: 1em;
   bottom: 1em;
-  font-size: 0.75em; }
-
-/*# sourceMappingURL=main.css.map */
+  font-size: 0.75em;
+}
